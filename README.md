@@ -81,3 +81,8 @@ conda activate td
 
 ## Licensing
 The source code is licensed under the [Apache 2.0 License](LICENSE). The datasets are licensed under their respective licenses listed above.
+
+## Funding
+This work was done in collaboration between l3i La Rochelle and Shift Technology, and was partially funded in the framework of the France Relance program.
+
+![Logos](logos.png)
