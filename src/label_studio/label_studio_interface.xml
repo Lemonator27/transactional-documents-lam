@@ -1,0 +1,78 @@
+<View>
+    <Image name="image" value="$image"/>
+    <Labels name="label" toName="image">
+      <!-- Base amounts -->
+      <Label value="Base Taxable Amount" background="darkgreen"/>
+      <Label value="Taxable Amount" background="green"/>
+      <Label value="Non-Taxable Amount" background="lightgreen"/>
+      
+      <!-- Net total components -->
+      <Label value="Net Total" background="green"/>
+      <Label value="Net Discounts" background="blue"/>
+      <Label value="Net Service Charge" background="purple"/>
+      
+      <!-- Tax components -->
+      <Label value="Tax Rate" background="red"/>
+      <Label value="Tax" background="yellow"/>
+      
+      <!-- Gross total components -->
+      <Label value="Gross Discounts" background="lightblue"/>
+      <Label value="Gross Service Charge" background="mediumpurple"/>
+      <Label value="Gross Total" background="brown"/>
+      <Label value="Base Gross Total" background="brown"/>
+      <Label value="Rounding Adjustment" background="gray"/>
+      <Label value="Commission Fee" background="pink"/>
+      
+      <!-- Due amounts -->
+      <Label value="Due Amount" background="cyan"/>
+      <Label value="Prior Balance" background="lime"/>
+      <Label value="Net Due Amount" background="teal"/>
+      
+      <!-- Payment components -->
+      <Label value="Paid Amount" background="darkblue"/>
+      <Label value="Change Amount" background="salmon"/>
+      <Label value="Cash Amount" background="indigo"/>
+      <Label value="Credit Card Amount" background="silver"/>
+      <Label value="E-Money Amount" background="violet"/>
+      <Label value="Other Payments" background="maroon"/>
+      
+      <!-- Menu statistics -->
+      <Label value="Menu Type Count" background="khaki"/>
+      <Label value="Menu Quantity Sum" background="turquoise"/>
+      
+      <!-- Line items -->
+      <Label value="Line Item Name" background="darkgreen"/>
+      <Label value="Line Item Tax Rate" background="magenta"/>
+      <Label value="Line Item Net Unit Price" background="goldenrod"/>
+      <Label value="Line Item Unit Tax" background="coral"/>
+      <Label value="Line Item Gross Unit Price" background="darksalmon"/>
+      <Label value="Line Item Quantity" background="plum"/>
+      <Label value="Line Item Net Price" background="darkorange"/>
+      <Label value="Line Item Tax" background="lightskyblue"/>
+      <Label value="Line Item Gross Price" background="peru"/>
+      <Label value="Line Item Net Sub Items Total" background="forestgreen"/>
+      <Label value="Line Item Gross Sub Items Total" background="lightsteelblue"/>
+      <Label value="Line Item Net Total" background="dodgerblue"/>
+      <Label value="Line Item Net Discounts" background="lightblue"/>
+      <Label value="Line Item Gross Discounts" background="lightcoral"/>
+      <Label value="Line Item Total Tax" background="thistle"/>
+      <Label value="Line Item Gross Total" background="darkslategrey"/>
+      
+      <!-- Sub line items -->
+      <Label value="Sub Line Item Name" background="lavender"/>
+      <Label value="Sub Line Item Tax Rate" background="lightseagreen"/>
+      <Label value="Sub Line Item Net Unit Price" background="aquamarine"/>
+      <Label value="Sub Line Item Unit Tax" background="lightgreen"/>
+      <Label value="Sub Line Item Gross Unit Price" background="lightcoral"/>
+      <Label value="Sub Line Item Quantity" background="orchid"/>
+      <Label value="Sub Line Item Net Price" background="tomato"/>
+      <Label value="Sub Line Item Tax" background="honeydew"/>
+      <Label value="Sub Line Item Gross Price" background="mediumorchid"/>
+    </Labels>
+  
+    <Rectangle name="bbox" toName="image" strokeWidth="3"/>
+    
+    <TextArea name="transcription" toName="image" editable="true" perRegion="true" required="true" maxSubmissions="1" rows="1" placeholder="Recognized Text" displayMode="region-list"/>
+    <TextArea name="line-item-id" toName="image" editable="true" perRegion="true" required="false" maxSubmissions="1" rows="1" placeholder="Line Item ID" displayMode="region-list"/>
+    <TextArea name="sub-line-item-id" toName="image" editable="true" perRegion="true" required="false" maxSubmissions="1" rows="1" placeholder="Sub Line Item ID" displayMode="region-list"/>
+</View>
