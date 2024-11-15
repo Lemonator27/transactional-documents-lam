@@ -26,10 +26,25 @@ This repository contains code and data related to the paper titled "Neurosymboli
 ```
 
 ## Datasets
-The relabeled CORD and SROIE datasets are available from the links below:
+This repository contains redistributions of:
 
-- [CORD]()
-- [SROIE]()
+1. SROIE ([Google Drive](https://drive.google.com/file/d/114d5XjQr0RzU9QhDL8IYHK8_pl8XYsTc/view?usp=drive_link))
+- Original source: https://github.com/zzzDavid/ICDAR-2019-SROIE
+- Copyright (c) 2019 Niansong Zhang, Songyi Yang, Shengjie Xiu
+- Licensed under MIT License
+
+2. CORD ([Google Drive](https://drive.google.com/file/d/1-rMlC10AiYvDnAyMoF0JIYCcxuZm5r2_/view?usp=drive_link))
+- Original source: https://github.com/clovaai/cord
+- Licensed under CC BY 4.0
+- Please cite the following papers when using this dataset:
+```
+@article{park2019cord,
+  title={CORD: A Consolidated Receipt Dataset for Post-OCR Parsing},
+  author={Park, Seunghyun and Shin, Seung and Lee, Bado and Lee, Junyeop and Surh, Jaeheung and Seo, Minjoon and Lee, Hwalsuk}
+  booktitle={Document Intelligence Workshop at Neural Information Processing Systems}
+  year={2019}
+}
+```
 
 Each dataset is organized as follows:
 
@@ -63,3 +78,6 @@ Create and activate a conda environment using the provided environment.yml:
 conda env create -f environment.yml
 conda activate td
 ```
+
+## Licensing
+The source code is licensed under the [Apache 2.0 License](LICENSE). The datasets are licensed under their respective licenses listed above.
