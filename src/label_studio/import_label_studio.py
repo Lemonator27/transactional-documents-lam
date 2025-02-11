@@ -179,13 +179,6 @@ def import_labelstudion_annotations(dataset_name: str) -> List[Task]:
 
     print(f"{invalid}/{tot} ({invalid/tot*100:.2f}%)")
 
-    # Create a validation split from the training split if it doesn't exist
-    if 'validation' not in splits:
-        train_data = splits['train']
-        random.shuffle(train_data)
-        splits['validation'] = train_data[:len(train_data)//5]
-        splits['train'] = train_data[len(train_data)//5:]
-
     for split in ['train', 'validation', 'test']:
         with open(Path(data_dir) / dataset_name / f'{split}-documents.jsonl', 'w') as f:
             for task, invoice in tqdm(splits[split]):

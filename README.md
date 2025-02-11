@@ -26,14 +26,14 @@ This repository contains code and data related to the paper titled "Neurosymboli
 ```
 
 ## Datasets
-This repository contains redistributions of:
+This repository contains Transactional Document reannotations of two datasets. The annotations can be downloaded from the following links:
 
-1. SROIE ([Google Drive](https://drive.google.com/file/d/114d5XjQr0RzU9QhDL8IYHK8_pl8XYsTc/view?usp=drive_link))
+1. SROIE-TD ([Google Drive](https://drive.google.com/file/d/114d5XjQr0RzU9QhDL8IYHK8_pl8XYsTc/view?usp=drive_link))
 - Original source: https://github.com/zzzDavid/ICDAR-2019-SROIE
 - Copyright (c) 2019 Niansong Zhang, Songyi Yang, Shengjie Xiu
 - Licensed under MIT License
 
-2. CORD ([Google Drive](https://drive.google.com/file/d/1-rMlC10AiYvDnAyMoF0JIYCcxuZm5r2_/view?usp=drive_link))
+2. CORD-TD ([Google Drive](https://drive.google.com/file/d/1-rMlC10AiYvDnAyMoF0JIYCcxuZm5r2_/view?usp=drive_link))
 - Original source: https://github.com/clovaai/cord
 - Licensed under CC BY 4.0
 - Please cite the following papers when using this dataset:
@@ -53,11 +53,11 @@ dataset_name/
 ├── labeled.json               # Label Studio format annotations
 ├── images/                    # Document images
 │   └── *.jpg
-├── ocr/                       # OCR results
+├── ocr/                       # OCR
 │   └── *.jpg.json
-├── train-documents.jsonl      # Generated training split
-├── validation-documents.jsonl # Generated validation split
-└── test-documents.jsonl       # Generated test split
+├── train-documents.jsonl      # Generated training split from labeled.json using src/label_studio/import_label_studio.py
+├── validation-documents.jsonl # Generated validation split from train-documents.jsonl using src/label_studio/import_label_studio.py
+└── test-documents.jsonl       # Generated test split from train-documents.jsonl using src/label_studio/import_label_studio.py
 ```
 
 ## Data Processing
