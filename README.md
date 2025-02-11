@@ -73,10 +73,17 @@ gross_price=net_price+tax_amount
 ```
 
 ## Environment Setup
-Create and activate a conda environment using the provided environment.yml:
+Create and activate a Python virtual environment using [uv](https://docs.astral.sh/uv/):
 ```bash
-conda env create -f environment.yml
-conda activate td
+uv venv
+source .venv/bin/activate  # On Unix/macOS
+# or
+.venv\Scripts\activate  # On Windows
+```
+
+Install dependencies:
+```bash
+uv sync
 ```
 
 ## Licensing

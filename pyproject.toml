@@ -1,0 +1,15 @@
+[project]
+name = "transactional-documents"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "editdistance>=0.8.1",
+    "numpy>=2.2.2",
+    "pydantic>=2.10.6",
+    "python-dotenv>=1.0.1",
+    "sympy>=1.13.3",
+    "tqdm>=4.67.1",
+    "zss>=1.2.0",
+]
