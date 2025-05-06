@@ -492,7 +492,7 @@ if __name__ == '__main__':
 
     # --- Load Ground Truth ---
     print("Loading ground truth dataset...")
-    docs_list = load_dataset('sroie', split='test')
+    docs_list = load_dataset('cord', split='test')
     docid2docs = {d.id: d for d in docs_list}
     print(f"Loaded {len(docid2docs)} ground truth documents.")
 
@@ -510,7 +510,35 @@ if __name__ == '__main__':
     with open(save_result_document_level,"w") as f:
         json.dump(sample_level_data, f)
     print("--- Document Level Results (Sample) ---")
-    print(sample_level_data[-1])
+    
+    mean_metrics = {}
+    count_valid = 0
+    all_sample_f1s = [sample['f1'] for sample in sample_level_data]
+    all_sample_f1_implicit = [sample['f1_implicit'] for sample in sample_level_data]
+    all_sample_nted = [sample['nted'] for sample in sample_level_data]
+    all_sample_nted_implicit = [sample['nted_implicit'] for sample in sample_level_data]
+    for sample in sample_level_data:
+        if sample.get("pred_is_valid", False) is True: 
+            count_valid += 1
+            
+    average_f1 = np.mean(all_sample_f1s)
+    average_f1_implicit = np.mean(all_sample_f1_implicit)
+    average_nted = np.mean(all_sample_nted)
+    average_nted_implicit = np.mean(all_sample_nted_implicit)
+    
+    proportion_valid_samples = count_valid / len(test) 
+    mean_metrics["f1"] = average_f1
+    mean_metrics["f1_implicit"] = average_f1_implicit
+    mean_metrics["nted"] = average_nted
+    mean_metrics["nted_implicit"] = average_nted_implicit
+    mean_metrics["proportion_valid_samples"] = proportion_valid_samples
+    save_result_metrics_mean = r"C:\Users\Admin\Documents\Internship\results\metrics\mistral_cord_mean_metrics.json"
+    with open(save_result_metrics_mean,"w") as f:
+        json.dump(mean_metrics, f)
+    print(f"Mean metrics {mean_metrics}")
+    
+
+    
 
     print('-' * 20)
 
